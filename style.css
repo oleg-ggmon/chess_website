@@ -3,10 +3,11 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 .aboutus-img{
-    width: 500px;
+    width: 80%;
     margin: auto;    
 
 }
@@ -72,6 +73,7 @@ img{
 .tournament-section{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .chess{
     background-image: url("chess_tournament.webp");
@@ -86,6 +88,39 @@ img{
 .form-container{
     border: 1px solid black;
     border: 10px;
-    width: 600px;
+    width: 80%;
+    display: flex; 
+    justify-content: center;
     margin: auto;
+}
+
+.hamburguer-menu{
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+#menu_button{
+    display: none;
+}
+
+
+@media(max-width: 500px){
+    .navbar_element{
+        display: block;
+        text-align: right;
+        margin-top: 40px;
+    }
+    #menu_button:checked ~ .navbar_element{
+        display: none;
+    }
+    .hamburguer-menu{
+        display: block;
+    }
+
+}
+
+@media(max-width: 300px){
+
 }
