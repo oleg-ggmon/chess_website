@@ -6,6 +6,15 @@
     margin: 0;
 }
 
+p{
+    margin: 20px;    
+}
+
+#aboutus, #tournament, #club, #champion, #contact{
+    text-align: center;
+    margin:20px;
+}
+
 .aboutus-img{
     width: 80%;
     margin: auto;    
@@ -69,12 +78,18 @@ img{
     background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 5px 5px 5px gray;
+    margin: auto;
 }
 .tournament-section{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.tournament-section section{
+    text-align: center;
+}
+
 .chess{
     background-image: url("chess_tournament.webp");
 }
@@ -85,6 +100,15 @@ img{
     background-image: url("./chess_tournament3.webp")
 }
 
+.read-more{
+    text-align: center;
+}
+
+.btn-submit{
+    text-align: center;
+}
+
+
 .form-container{
     border: 1px solid black;
     border: 10px;
@@ -93,6 +117,7 @@ img{
     justify-content: center;
     margin: auto;
 }
+
 
 .hamburguer-menu{
     display: none;
@@ -106,16 +131,30 @@ img{
 }
 
 
+#menu_button:checked ~ .navbar_element{
+    display: none;
+    background-color: blue;
+}
+
+
 @media(max-width: 500px){
+
     .navbar_element{
         display: block;
         text-align: right;
         margin-top: 40px;
     }
-    #menu_button:checked ~ .navbar_element{
-        display: none;
-    }
     .hamburguer-menu{
+        display: block;
+    }
+    .form-container div{
+        margin: 10px;
+    }
+    .form-container div input{
+        width: 150px;
+    } 
+    .form-container div label{
+        width: 150px;
         display: block;
     }
 
